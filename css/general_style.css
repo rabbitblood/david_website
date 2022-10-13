@@ -1,0 +1,101 @@
+@import url(reset.css);
+@import url(background_css.css);
+@font-face {
+    font-family: "blue_shell";
+    src: url(./../font/RoBlueShellBold-gxn35.otf);
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    z-index: 10;
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.8);
+    position:absolute;
+    top: 100px;
+    width: 100%;
+    height: 200px;
+    transition: all 0.5s ease;
+}
+nav ul{
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav ul li{
+    background-color: darkcyan;
+    height: 30%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-family: "blue_shell";
+    text-transform: uppercase;
+}
+
+#main_img_container
+{
+    top: 0px;
+    left: 0px;
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: url(./../image/56326e82-431b-4e1b-97b5-b6630c8a84d3-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+#logo_container img{
+    height: 100px;
+}
+
+#web_title{
+    font-size: 20px;
+    text-align: left;
+    position:absolute;
+    top:20vh;
+    left: 10px;
+    font-family: "blue_shell";
+    text-transform: uppercase;
+}
+
+#web_sub_title{
+    font-size: 35px;
+    text-align: left;
+    position:absolute;
+    top:calc(20vh + 20px);
+    left: 10px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menu_button{
+    height: 100px;
+}
+
+#menu_button img{
+    height: 100px;
+}
