@@ -37,37 +37,186 @@
       <div class="background_bubble"></div>
       <div class="background_bubble"></div>
     </div>
-    <header>
-      <a href="./index.html">
-        <div id="logo_container">
-          <img src="./../image/david_logo.png" alt="David Siu Logo" />
+    <div>
+      <header>
+        <a href="./index.html">
+          <div id="logo_container">
+            <img src="./../image/david_logo.png" alt="David Siu Logo" />
+          </div>
+        </a>
+        <div id="menu_button">
+          <img
+            src="./../image/menu_btn.svg"
+            alt=""
+            onclick="click_menu_button()"
+          />
         </div>
-      </a>
-      <div id="menu_button">
-        <img
-          src="./../image/menu_btn.svg"
-          alt=""
-          onclick="click_menu_button()"
-        />
+        <nav id="nav_bar">
+          <ul>
+            <a href="./index.html"><li>Home</li></a>
+            <a href="./photography.html"><li>Photography</li></a>
+            <a href="./about.html"><li>About</li></a>
+            <a href="./contact.html"><li>Contact</li></a>
+            <a href="./Lorem.html"><li>Lorem</li></a>
+          </ul>
+        </nav>
+      </header>
+      <div id="main_img_container">
+        <div id="main_image_color_overlay"></div>
       </div>
-      <nav id="nav_bar">
-        <ul>
-          <a href="./index.html"><li>Home</li></a>
-          <a href="./photography.html"><li>Photography</li></a>
-          <a href="./about.html"><li>About</li></a>
-          <a href="./contact.html"><li>Contact</li></a>
-        </ul>
-      </nav>
-    </header>
-    <div id="main_img_container">
-      <div id="main_image_color_overlay"></div>
+      <h1 id="web_title">David Siu</h1>
+      <h2 id="web_sub_title">Photography</h2>
+
+      <main>
+        <!--note for this part I will mainly use inline style because i am going to delete them afterwards anyway-->
+        <section>
+          <h2>Hongming Wang PROJECT PROPOSAL Comp 1850</h2>
+          <div class="text_group">
+            <h3>Theme For This Project</h3>
+            <p>
+              the theme for this project is for a friend's photography profile
+              website
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>Prime Objectives Of the Website</h3>
+            <p>
+              the goal of building this website is for people to see his
+              photography online, and promote himself. there will be a contact
+              section where you can send email to him, so he will have better
+              chance to get job, or even better if some people wants to buy his
+              photography.
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>Detailed Analysis Of The Ideal Audience</h3>
+            <p>
+              I believe the audience of this website will be artist or prople
+              who is looking for an artist. Language and gender, or anything
+              else shouldnt really be a problem. There wont be photo selling
+              section since he is not fully professional into photography yet.
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>Description of the information architecture</h3>
+            <p>
+              the navigation should be simple, there is the main page for
+              general infomation, a photography page to put on all the best
+              photography he has shoot for presenting, a about me page for
+              information only about himself, and a contact page for giving out
+              a way to contact with him.
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>Illustrate ideas for the pages</h3>
+            <p>
+              I will build the bare bone of this page for now, without too much
+              css. That should be able to be the sketch.
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>Analyze the competition</h3>
+            <p>
+              there are many competition website that I have viewd for
+              reference:
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://www.demasrusli.com/"
+                target="_blank"
+                >https://www.demasrusli.com/</a
+              >
+              this website have a changing background, which pictures are
+              stunning and high resolution, I believe this is done by
+              javascript, and I should be able to figure out how to do it.
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://chelsea-kauai.com/"
+                target="_blank"
+                >https://chelsea-kauai.com/</a
+              >
+              best part about this website is when you scroll down the page,
+              background and main content move in a parallel way which add the
+              dynamic feeling, I believe this is the javascript changing
+              background position relative with OnScroll listener.
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://pierretlambert.com/"
+                target="_blank"
+                >https://pierretlambert.com/</a
+              >
+              for this one, my client really like the content layout of it, so
+              we will be focusing to having same style of content and layout as
+              this website
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>A link to a website that you use regularly</h3>
+            <p>
+              Speaking of the website I use regularly, it must be Youtube.
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://Youtube.com/"
+                target="_blank"
+                >https://Youtube.com/</a
+              >
+              the target of this platform is pretty much for everyone, and that
+              is for sure for advertisement earning, and of course its success
+              is mostly depends on its content and the algorism. However the
+              page layout definitely helped, first the search bar is user
+              friendly, very eye catching. since most people only search for
+              what they want to watch. it also gives 8 recommend videos in the
+              home page for you, most time at least one of them will draw my
+              attention.
+            </p>
+          </div>
+
+          <div class="text_group">
+            <h3>uses color effectively</h3>
+            <p>
+              the best color helper for me is coolors.co
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://https://coolors.co/.com/"
+                target="_blank"
+                >https://https://coolors.co/.com/</a
+              >
+              here is one I just generated:
+            </p>
+
+            <div style="padding: 5px; display: flex; height: 100px">
+              <div style="background-color: #cacf85; flex: 1"></div>
+              <div style="background-color: #8cba80; flex: 1"></div>
+              <div style="background-color: #658e9c; flex: 1"></div>
+              <div style="background-color: #4d5382; flex: 1"></div>
+              <div style="background-color: #514663; flex: 1"></div>
+            </div>
+          </div>
+          <div class="text_group">
+            <h3>Layout I find appealing</h3>
+            <p>
+              <a
+                style="display: block; padding: 10px; line-height: 3rem"
+                href="https://chelsea-kauai.com/"
+                target="_blank"
+                >https://chelsea-kauai.com/</a
+              >
+              for now the most satisfied website is chelsea-kauai's profile
+              website, I do like the layout, the element, and the user
+              interaction, I will definitely make some of this website's element
+              into my project.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer></footer>
     </div>
-    <h1 id="web_title">David Siu</h1>
-    <h2 id="web_sub_title">Photography</h2>
-
-    <main></main>
-
-    <footer></footer>
     <script src="./../js/general_js.js"></script>
   </body>
 </html>
