@@ -105,8 +105,12 @@ nav ul a{
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: all 0.2s linear;
 }
-
+nav ul :hover{
+    background-color: black;
+    color: white;
+}
 nav ul li{
     height: 100%;
     border-radius: 20px;
@@ -115,6 +119,7 @@ nav ul li{
     align-items: center;
     text-transform: uppercase;
     font-weight: bold;
+    width: 100%;
 }
 
 section{
