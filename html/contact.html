@@ -15,28 +15,6 @@
     <link rel="stylesheet" href="./../css/general_style.css" />
   </head>
   <body>
-    <div id="background_animation_container">
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-      <div class="background_bubble"></div>
-    </div>
     <header>
       <a href="./index.html">
         <div id="logo_container">
@@ -45,7 +23,7 @@
       </a>
       <div id="menu_button">
         <img
-          src="./../image/menu_btn.svg"
+          src="./../image/cam512x512.png"
           alt=""
           onclick="click_menu_button()"
         />
@@ -60,14 +38,57 @@
         </ul>
       </nav>
     </header>
-    <div id="main_img_container">
-      <div id="main_image_color_overlay"></div>
-    </div>
-    <h1 id="web_title">Contact <br />David Siu</h1>
+    <main>
+      <h1 class="header_margin">Contact DavidSiu</h1>
+      <section id="contact_section">
+        <img alt="" src="./../image/IMG_5979.webp" />
+        <form class="contact_me_form">
+          <div class="lable_group">
+            <label for="sender_name">your name</label>
+            <input type="text" id="sender_name" name="sender_name" />
+          </div>
+          <div class="lable_group">
+            <label for="sender_phone_number">your phone number</label>
+            <input
+              type="text"
+              id="sender_phone_number"
+              name="sender_phone_number"
+            />
+          </div>
+          <div class="lable_group">
+            <label for="sender_email_adress">your email adress</label>
+            <input
+              type="text"
+              id="sender_email_adress"
+              name="sender_email_adress"
+            />
+          </div>
+          <div class="lable_group">
+            <label for="sender_email_adress"
+              >what would you like to get back from me?</label
+            >
+            <textarea class="contact_me_textbox"></textarea>
+          </div>
+          <input
+            type="submit"
+            value="SEND"
+            class="download_btn margin_center"
+          />
+        </form>
+      </section>
+    </main>
 
-    <main></main>
-
-    <footer></footer>
+    <footer>
+      <div id="footer_medias">
+        <a href=""><img alt="inst_icon" src="./../image/inst512x512.png" /></a>
+        <a href=""
+          ><img alt="facebook_icon" src="./../image/facebook512x512.png"
+        /></a>
+      </div>
+      <div id="footer_copyright">
+        @Chancheong Siu © 2022 <br />Site By @Hongming Wang
+      </div>
+    </footer>
     <script src="./../js/general_js.js"></script>
   </body>
 </html>
