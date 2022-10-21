@@ -42,7 +42,11 @@
       <h1 class="header_margin">Contact DavidSiu</h1>
       <section id="contact_section">
         <img alt="" src="./../image/IMG_5979.webp" />
-        <form class="contact_me_form">
+        <form
+          action="https://formsubmit.co/ChanCheongsiu@gmail.com"
+          method="POST"
+          class="contact_me_form"
+        >
           <div class="lable_group">
             <label for="sender_name">your name</label>
             <input type="text" id="sender_name" name="sender_name" />
@@ -67,7 +71,11 @@
             <label for="sender_email_adress"
               >what would you like to get back from me?</label
             >
-            <textarea class="contact_me_textbox"></textarea>
+            <textarea
+              class="contact_me_textbox"
+              name="description"
+              id="description"
+            ></textarea>
           </div>
           <input
             type="submit"
