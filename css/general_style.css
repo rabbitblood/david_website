@@ -54,6 +54,11 @@ main{
     flex:1;
 }
 
+ul{
+    list-style-type: square;
+    padding: 50px;
+}
+
 header{
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.5);
@@ -71,17 +76,40 @@ nav{
     position:fixed;
     top: 60px;
     width: 100%;
-    height: 0;
-    opacity: 0;
-    transition: all 0.2s linear;
+    font-size: 15px;
+    height: 300px;
+    opacity: 1;
     text-align: center;
-    font-size: 0px;
-    text-size-adjust: auto;
-    font-size-adjust: 0.58;
+    transform: scale(1,0);
+    transition: all 0.2s linear 0s;
+    transform-origin: top;
 }
 nav ul{
     height: 100%;
     padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition:inherit;
+    font-size: inherit;
+}
+
+#sub_nav_bar{
+    background-color: rgba(0, 0, 0, 0);
+    position:relative;
+    top: 0;
+    width: 100%;
+    transition: all 0.2s linear;
+    text-align: center;
+    font-size: 20px;
+    border: solid black 2px;
+    height: max-content;
+    opacity: 1;
+    transform: scale(1,1);
+}
+#sub_nav_bar ol{
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -96,7 +124,48 @@ a:visited{
     color: black;
 }
 
+a:focus{
+    border: black 2px solid;
+    border-radius: 5px;
+}
+
+a:active{
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    color: black;
+    background-color: white;
+    height:100%;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:inherit;
+    flex:1;
+    font-size: inherit;
+}
+nav li:hover a{
+    background-color: black;
+    color: white;
+}
 nav ul a{
+    height: 100%;
+    border-radius: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    transition:inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+#sub_nav_bar ol a{
     background-color: white;
     height:100%;
     margin: 5px;
@@ -105,13 +174,13 @@ nav ul a{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    transition: all 0.2s linear;
+    font-size: 20px;
 }
-nav ul :hover{
+#sub_nav_bar ol :hover{
     background-color: black;
     color: white;
 }
-nav ul li{
+#sub_nav_bar ol li{
     height: 100%;
     border-radius: 20px;
     display: flex; 
@@ -188,7 +257,7 @@ section{
 #menu_button{
     height: 50px;
     margin: 5px;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 #menu_button img{
@@ -274,12 +343,10 @@ section{
 #footer_medias{
     display: flex;
     justify-content: center;
+    font-size: 60px;
 }
 #footer_medias > *{
     margin: 10px;
-}
-#footer_medias img{
-    max-width: 30px;
 }
 .header_margin{
     margin-top: 70px;
@@ -293,6 +360,9 @@ section{
 #about_me_section > *{
     padding: 10px;
 }
+#about_me_section p{
+    padding: 10px 30px ;
+}
 .download_btn{
     min-width: 200px;
     min-height: 50px;
@@ -302,10 +372,18 @@ section{
     transition: all 0.2s linear;
     cursor: pointer;
     border: 2px black solid;
+    align-self: center;
+    justify-self: center;
+}
+.download_btn a{
+    text-decoration: none;
 }
 .download_btn:hover{
     color: white;
     background-color: black;
+}
+.download_btn:hover a{
+    color: white;
 }
 .lable_group{
     margin: 10px;
@@ -329,12 +407,80 @@ section{
     display: block;
     margin: auto;
 }
+.gallary_photos{
+    width: 100%;
+}
+.gallary_photos img{
+    height: 110vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.quote_wrapper{
+    position:relative;
+    margin: 20px auto;
+    padding: 20px;
+    border: solid 5px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+    background-color: silver;
+    max-width: 300px;
+}
+.quote_wrapper::before{
+    content: "\201C";
+    position: absolute;
+    top:-25px;
+    left:-20px;
+    font-size: 100px;
+}
+.quote_wrapper::after{
+    content: "\201D";
+    position: absolute;
+    top:-25px;
+    right:-20px;
+    font-size: 100px;
+}
+cite{
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+table{
+    border: solid 2px black;
+    margin: 20px auto;
+}
+th,td,tbody,thead{
+    text-align: center;
+    border: solid 2px black;
+    margin: 5px;
+    padding: 5px;
+}
+thead{
+    color: white;
+    background-color: black;
+
+}
+th{
+    border-bottom: solid 2px white;
+}
+.about_me_info_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 5px;
+}
+input, textarea{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
 /*---------------------------------------media-----------------------------------------*/
 @media (min-width:750px){
     .photo_catagory_figure{
         max-width: 100%;
         height: 100%;
         width: 100%;
+        margin: 0;
     }
     .photo_catagory_figure img{ 
         min-height: unset;
@@ -366,10 +512,13 @@ section{
         max-width: 1000px;
         display: grid; 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 250px;
+        grid-template-rows: 1fr 1fr;
     }
     #about_me_section img{
         grid-area: 1/1/span 2 /1;
+    }
+    #about_me_section .about_me_info_wrapper{
+        grid-area: 1/2/span 2 /2;
     }
     #about_me_section .download_btn, #about_me_section p, #about_me_section img{
         margin: auto;
@@ -416,8 +565,44 @@ section{
         font-size: 20px;
         z-index: 15;
     }
+    #sub_nav_bar{
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        height: 50px;
+        opacity: 1;
+        top: unset;
+        z-index: 15;
+        align-self: center;
+    }
+    #sub_nav_bar ol{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5px;
+        z-index: 15;
+    }
+    #sub_nav_bar ol a{
+        flex: 1;
+        margin: 5px;
+        height: 90%;
+        z-index: 15;
+    }
+    #sub_nav_bar ol a li{
+        font-size: 20px;
+        z-index: 15;
+    }
+    #photography_gallery_section{
+        grid-template-rows: 70px 200px 300px 200px 20px;
+    }
 }
-
+@media (min-width:1600px){
+    #photography_gallery_section{
+        grid-template-rows: 70px 250px 350px 250px 20px;
+    }
+    .parallax_background_section{
+        background-size:250vh;
+    }
+}
 /*--------------------------------------keyframe-----------------------------------------*/
 @-webkit-keyframes color_change{
     0%,100%{
@@ -452,4 +637,33 @@ section{
     80%{
         background-color: rgba(147, 168, 29, 0.3);
     }
+}
+
+/*--------------------------------------lorem-----------------------------------------*/
+.lorem_only p,.lorem_only ul,.lorem_only ol,.lorem_only blockquote,.lorem_only pre{
+    margin: 10px;
+    padding: 20px;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: silver;
+}
+.lorem_only ol,.lorem_only ul{
+    padding: 50px;
+    list-style-type:georgian;
+}
+.lorem_only blockquote{
+    background-color:black;
+}
+.lorem_only blockquote p{
+    background-color:white;
+}
+.lorem_only pre{
+    background-color: orange;
+}
+.lorem_only img{
+    margin: auto;
+    width: 100%;
+    border:2px solid black;
+    border-radius: 50%;
+    padding: 10px;
 }
