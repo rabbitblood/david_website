@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Photography | David Siu</title>
+    <title>Astrophotography Photography | David Siu</title>
     <meta charset="utf-8" />
     <meta name="description" content="David Siu Profile Website" />
     <meta
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./../css/general_style.css" />
   </head>
   <body>
+    <canvas></canvas>
     <header>
       <a href="./index.html">
         <div id="logo_container">
@@ -50,21 +51,38 @@
         </ol>
       </nav>
       <div class="gallary_photos">
-        <img
-          alt="astrophotography taken by David Siu"
-          src="./../image/astro/DSC09067-Mean Min Hor Noise.jpg"
-          loading="lazy"
-        />
-        <img
-          alt="astrophotography taken by David Siu"
-          src="./../image/astro/DSC09139-Mean Min Hor Noise.jpg"
-          loading="lazy"
-        />
-        <img
-          alt="astrophotography taken by David Siu"
-          src="./../image/astro/STAR TRAILS-2.jpg"
-          loading="lazy"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            src="./../image/astro/DSC09067-Mean Min Hor Noise.webp"
+          />
+          <img
+            alt="astrophotography taken by David Siu"
+            src="./../image/astro/DSC09067-Mean Min Hor Noise.jpg"
+            loading="lazy"
+          />
+        </picture>
+
+        <picture>
+          <source
+            type="image/webp"
+            src="./../image/astro/DSC09139-Mean Min Hor Noise.webp"
+          />
+          <img
+            alt="astrophotography taken by David Siu"
+            src="./../image/astro/DSC09139-Mean Min Hor Noise.jpg"
+            loading="lazy"
+          />
+        </picture>
+
+        <picture>
+          <source type="image/webp" src="./../image/astro/STAR TRAILS-2.jpg" />
+          <img
+            alt="astrophotography taken by David Siu"
+            src="./../image/astro/STAR TRAILS-2.jpg"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </main>
 
@@ -77,6 +95,7 @@
         @Chancheong Siu © 2022 <br />Site By @Hongming Wang
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/ee56db6fac.js"
       crossorigin="anonymous"

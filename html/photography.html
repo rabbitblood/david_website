@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./../css/general_style.css" />
   </head>
   <body>
+    <canvas></canvas>
     <header>
       <a href="./index.html">
         <div id="logo_container">
@@ -43,25 +44,40 @@
       <section id="photography_gallery_section">
         <a href="./photo_astrophotography.html" class="gallery1">
           <figure class="photo_catagory_figure">
-            <img alt="" src="./../image/star_trait_small.jpg" />
+            <picture>
+              <source
+                type="image/webp"
+                src="./../image/astro/STAR TRAILS-2.jpg"
+              />
+              <img alt="" src="./../image/astro/STAR TRAILS-2.jpg" />
+            </picture>
             <figcaption>Astrophotography</figcaption>
           </figure>
         </a>
         <a href="./photo_landscape.html" class="gallery2">
           <figure class="photo_catagory_figure">
-            <img alt="" src="./../image/DSC08694.jpg" />
+            <picture>
+              <source type="image/webp" src="./../image/DSC08694.webp" />
+              <img alt="" src="./../image/DSC08694.jpg" />
+            </picture>
             <figcaption>Landscape</figcaption>
           </figure>
         </a>
         <a href="./photo_nature.html" class="gallery3">
           <figure class="photo_catagory_figure">
-            <img alt="" src="./../image/IMG_3288.jpg" />
+            <picture>
+              <source type="image/webp" src="./../image/IMG_3288.webp" />
+              <img alt="" src="./../image/IMG_3288.jpg" />
+            </picture>
             <figcaption>Nature</figcaption>
           </figure>
         </a>
         <a href="./photo_portrait.html" class="gallery4">
           <figure class="photo_catagory_figure">
-            <img alt="" src="./../image/DSC00776.jpg" />
+            <picture>
+              <source type="image/webp" src="./../image/DSC00776.webp" />
+              <img alt="" src="./../image/DSC00776.jpg" />
+            </picture>
             <figcaption>Portrait</figcaption>
           </figure>
         </a>
@@ -77,6 +93,7 @@
         @Chancheong Siu © 2022 <br />Site By @Hongming Wang
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/ee56db6fac.js"
       crossorigin="anonymous"

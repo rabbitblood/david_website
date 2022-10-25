@@ -116,29 +116,23 @@ nav ul{
     justify-content: space-between;
 }
 
-a:link{
-    color: black;
-}
-
-a:visited{
+a:link,a:visited{
     color: black;
 }
 
 a:focus{
-    border: black 2px solid;
-    border-radius: 5px;
+    font-size: 150%;
+}
+a:active{
+    font-size: 100%;
 }
 
-a:active{
-    background-color: black;
-    color: white;
-}
 
 nav ul li{
     color: black;
     background-color: white;
     height:100%;
-    margin: 5px;
+    margin: 0 5px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -146,9 +140,12 @@ nav ul li{
     transition:inherit;
     flex:1;
     font-size: inherit;
+    margin: 5px;
+}
+nav li:hover{
+    background-color: black;
 }
 nav li:hover a{
-    background-color: black;
     color: white;
 }
 nav ul a{
@@ -168,7 +165,7 @@ nav ul a{
 #sub_nav_bar ol a{
     background-color: white;
     height:100%;
-    margin: 5px;
+    margin: 0 5px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -332,6 +329,10 @@ section{
     font-size: 1em;
     align-self:flex-end;
 }
+footer
+{
+    z-index: 10;
+}
 #footer_copyright{
     padding: 10px;
     text-align: center;
@@ -474,6 +475,13 @@ input, textarea{
     border-radius: 5px;
     padding: 5px;
 }
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+}
 /*---------------------------------------media-----------------------------------------*/
 @media (min-width:750px){
     .photo_catagory_figure{
@@ -557,7 +565,7 @@ input, textarea{
     }
     nav ul a{
         flex: 1;
-        margin: 5px;
+        margin: 0;
         height: 90%;
         z-index: 15;
     }
@@ -583,7 +591,7 @@ input, textarea{
     }
     #sub_nav_bar ol a{
         flex: 1;
-        margin: 5px;
+        margin: 0 5px;
         height: 90%;
         z-index: 15;
     }
@@ -640,6 +648,14 @@ input, textarea{
 }
 
 /*--------------------------------------lorem-----------------------------------------*/
+.lorem_only{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
 .lorem_only p,.lorem_only ul,.lorem_only ol,.lorem_only blockquote,.lorem_only pre{
     margin: 10px;
     padding: 20px;
@@ -666,4 +682,6 @@ input, textarea{
     border:2px solid black;
     border-radius: 50%;
     padding: 10px;
+    max-width: 500px;
+    align-self: center;
 }
