@@ -365,6 +365,7 @@ footer
     padding: 10px 30px ;
 }
 .download_btn{
+    display: flex;
     min-width: 200px;
     min-height: 50px;
     color: black;
@@ -376,7 +377,7 @@ footer
     align-self: center;
     justify-self: center;
 }
-.download_btn a{
+.download_btn{
     text-decoration: none;
 }
 .download_btn:hover{
@@ -466,6 +467,8 @@ th{
 .about_me_info_wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 label{
     margin: 5px;
