@@ -7,7 +7,7 @@ let nav_bar_expand_height = "300px";
 let nav_bar_expanded = false;
 let nav_bar_font_size = "15px";
 
-var media1024px = window.matchMedia("(min-width: 1024px)");
+var media750px = window.matchMedia("(min-width: 750px)");
 
 //canvas part
 const canvas = document.querySelector("canvas");
@@ -22,7 +22,7 @@ let mouse_pos_y = 200;
 $(document).ready(function(){init()});
 
 function init(){
-    if(!media1024px.matches){
+    if(!media750px.matches){
         let nav_bar_expanded = false;
         nav_bar.style.transform = "scale(1,0)"
     }
@@ -30,12 +30,17 @@ function init(){
         nav_bar.style.transform = "scale(1,1)"
         menu_button.style.display = "none";
     }
+    parabackgroundMove();
+    init_gallery();
+    /*
     setTimeout(function(){
         init_canvas();
     },100)
     animate();
+    */
 }
 
+/*
 addEventListener("mousemove", (e)=>{
     mouse_pos_x = e.clientX;
     mouse_pos_y = e.clientY + window.scrollY;
@@ -45,25 +50,31 @@ addEventListener("mousemove", (e)=>{
     current_arc.instantiate(mouse_pos_x, mouse_pos_y);
     canvas_circles.push(current_arc);
 });
+*/
 
 addEventListener("scroll",()=>{
-    if(document.getElementsByClassName("parallax_background_section")[0]!=null){
+    parabackgroundMove();
+});
+
+function parabackgroundMove()
+{
+    if(background_image!=null){
         let current_scroll_pos = this.scrollY;
         let screen_height = this.screen.height;
         let screen_width = this.screen.width;
-        const parallax_background = document.getElementsByClassName("parallax_background_section")[0];
+        const parallax_background = background_image;
         let parallax_background_top = parallax_background.getBoundingClientRect().top;
         let parallax_background_height = parallax_background.getBoundingClientRect().height;
         let parallax_image_screen_pos = screen_height - parallax_background_top;
         if(parallax_image_screen_pos > 0)
         {
-            parallax_background.style = `background-position: center -${(parallax_image_screen_pos/(parallax_background_height+screen_height))*parallax_background_height/1.3}px;`;
+            parallax_background.style = `background-position: center -${(parallax_image_screen_pos/(parallax_background_height+screen_height))*parallax_background_height/1.5}px;`;
         }
     }
-});
+}
 
 addEventListener('resize', () => {
-    if(media1024px.matches){
+    if(media750px.matches){
         nav_bar.removeAttribute("style");
         menu_button.style.display = "none";
         nav_bar.style.transform = "scale(1,1)"
@@ -75,6 +86,35 @@ addEventListener('resize', () => {
         menu_button.style.transform = "rotate(0deg)";
     }
 });
+
+function init_gallery()
+{
+
+
+    if(document.querySelector(".gallary_photos") != null)
+    {
+        const gallary_display = document.querySelector(".gallary_display_img");
+        const gallary_display_close = document.querySelector(".gallary_display_close");
+        const gallary_images = document.querySelector(".gallary_photos").querySelectorAll("img");
+
+        gallary_display_close.addEventListener("click", (e)=>{
+            gallary_display.style.display = "none";
+        });
+
+        for(const current_img of gallary_images)
+        {
+            current_img.addEventListener("click",()=>{
+                gallary_display.style.display = "inline";
+                gallary_display.style.backgroundImage = `url(${current_img.src})`;
+            });
+
+            if(current_img.offsetHeight > current_img.offsetWidth)
+            {
+                current_img.style = "grid-row-end: span 2;";
+            }
+        }
+    }
+}
 
 function set_background_image(image_url){
     background_image.style.backgroundImage = image_url;
